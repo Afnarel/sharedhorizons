@@ -9,6 +9,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/docs/', include('rest_framework_swagger.urls')),
+    url(r'^api/image/?$', views.get_image, name='image'),
     url(r'^api/videos/?$', views.ListVideosView.as_view()),
     url(r'^api/(?P<channel_id>\w+)/videos/?$', views.ListUserVideosView.as_view())
 ]

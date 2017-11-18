@@ -12,8 +12,9 @@ API_KEY = "AIzaSyBICvdNQ6JDOpfyndXX4CzSL8WOYFxHXb0"
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        channel_ids = Channel.objects.values_list("channel_id", flat=True)
-        channels_map = {c.channel_id: c for c in Channel.objects.all()}
+        channels = Channel.objects.filter(gender=Channel.MALE)
+        channel_ids = channels.values_list("channel_id", flat=True)
+        channels_map = {c.channel_id: c for c in channels.all()}
 
         pbar = tqdm(total=len(channel_ids), leave=True)
         for channel_id in channel_ids:
