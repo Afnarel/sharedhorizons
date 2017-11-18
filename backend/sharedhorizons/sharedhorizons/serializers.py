@@ -5,6 +5,7 @@ from .models import Video
 
 class VideoSerializer(serializers.ModelSerializer):
     author = serializers.SerializerMethodField()
+    channel_id = serializers.SerializerMethodField()
     nb_views = serializers.SerializerMethodField()
     published_date = serializers.SerializerMethodField()
     category = serializers.SerializerMethodField()
@@ -14,6 +15,9 @@ class VideoSerializer(serializers.ModelSerializer):
 
     def get_author(self, video):
         return video.channel.name
+
+    def get_channel_id(self, video):
+        return video.channel.channel_id
 
     def get_nb_views(self, video):
         return "2.8M"
@@ -38,8 +42,10 @@ class VideoSerializer(serializers.ModelSerializer):
         fields = (
             'title',
             'author',
+            'channel_id',
             'nb_views',
             'published_date',
+            'description',
             'category',
             'thumbnail',
             'url',
