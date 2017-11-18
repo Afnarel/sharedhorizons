@@ -1,0 +1,51 @@
+Education
+	#Science
+	#Histoire
+	#Sexualité
+
+Culture
+	#Culture
+	#Littérature
+	#Cinéma
+	#Séries
+	#Musique
+	#Art
+	#Humour
+
+Société
+	#Société
+	#Politique
+
+Compétences
+	#Droit
+	#Santé
+	#DIY
+	#Cuisine
+
+
+#Environnement
+#Animaux
+#Dessin
+#Mode & beauté
+#Fiction
+#Voyage
+#ASMR
+#Mode
+#Beauté
+#Jeux vidéo
+#Cosplay
+#Lifestyle
+#Sport
+
+Education
+#Science, #Histoire, #Sexualité
+
+Culture
+#Culture, #Littérature, #Cinéma, #Séries, #Musique, #Art, #Humour
+
+Société
+#Société, #Politique
+
+Compétences
+#Droit, #Santé, #DIY, #Cuisine
+
