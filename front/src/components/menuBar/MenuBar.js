@@ -6,22 +6,22 @@ import './MenuBar.scss';
 const menuTabs = [
     {
         name: 'Education',
-        link: '/categories/music',
+        link: '/education',
         icon: 'fa-book'
     },
     {
         name: 'Culture',
-        link: '/categories/sport',
+        link: '/culture',
         icon: 'fa-video-camera'
     },
     {
         name: 'Société',
-        link: '/categories/gaming',
+        link: '/societe',
         icon: 'fa-user'
     },
     {
         name: 'Compétences',
-        link: '/categories/gaming',
+        link: '/competence',
         icon: 'fa-superscript'
     }
 ];
@@ -38,10 +38,6 @@ class MenuBar extends React.Component {
     componentDidMount() {
     }
 
-    _handleTabClick(index, tab) {
-
-    }
-
     render() {
         return (
             <div className={className('menuBar')}>
@@ -53,8 +49,10 @@ class MenuBar extends React.Component {
                         menuTabs.map(tab => {
                             return (
                                 <div className="tab">
+                                    <a href={tab.link}>
                                     <i className={className('icon', 'fa', tab.icon)}/>
                                     {tab.name.toUpperCase()}
+                                    </a>
                                 </div>
                             )
                         })
