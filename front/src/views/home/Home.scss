@@ -9,7 +9,7 @@
   .videos {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     overflow: hidden;
     margin-bottom: 30px;

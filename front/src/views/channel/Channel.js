@@ -6,17 +6,17 @@ import './Channel.scss';
 
 class Channel extends React.Component {
     render() {
+        console.log(this.props.match.params.name)
         return (
             <div className="channel">
                 <Scrollbar className="scrollbar">
                     <div className="header">
                         <div className="background"/>
-                        <h1 className="title"><i className="fa fa-music"/> MUSIC</h1>
+                        <h1 className="title">{this.props.match.params.name}</h1>
                         <ul className="categoryInfo">
-                            <li>97,174,199 subscribers</li>
-                            <li>255,525,456 Views</li>
-                            <li>45,23,65 Channel No</li>
-                            <li className="subscribe"><a href="#">Subscribe</a></li>
+                            <li>97,174,199 abonnés</li>
+                            <li>255,525,456 vues</li>
+                            <li className="subscribe"><a href="#">S'abonner</a></li>
                         </ul>
                     </div>
 
