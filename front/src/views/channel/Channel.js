@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoThumbmail from '../../components/videothumbmail/VideoThumbmail';
+import Constants from '../../services/ConstantsService';
 import Scrollbar from 'react-custom-scrollbars';
 
 import './Channel.scss';
@@ -22,9 +23,18 @@ class Channel extends React.Component {
 
                     <div className="videos">
                         {
-                            Array.from(Array(19), (x, i) => i).map(() => {
+                            Object.keys(Constants.VIDEOS).reduce((prev, next) => {
+                                return prev.concat(Constants.VIDEOS[next]);
+                            }, []).filter(v => v.author === this.props.match.params.name).map((video) => {
                                 return (
-                                    <VideoThumbmail/>
+                                    <VideoThumbmail title={video.title}
+                                                    author={video.author}
+                                                    nbViews={video['nb_views']}
+                                                    category={video.category}
+                                                    thumbnail={video.thumbnail}
+                                                    url={video.url}
+                                                    length={video.length}
+                                                    date={video['published_date']}/>
                                 )
                             })
                         }

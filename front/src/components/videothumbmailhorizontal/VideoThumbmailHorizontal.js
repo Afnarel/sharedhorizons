@@ -8,16 +8,18 @@ class VideoThumbmailHorizontal extends React.Component {
             <div className="videoThumbmailHorizontal ">
                 <div className="videoItem">
                     <div className="thumb">
-                        <small className="time">10:53</small>
-                        <a href="/video/Q5l2ChAqRDg">
-                            <img src={require('../../images/random' + getRandomInt(1, 12) + '.jpeg')}/>
+                        <small className="time">{this.props.length}</small>
+                        <a href={"/video/" + this.props.url.split('watch?v=')[1]}>
+                            <img src={this.props.thumbnail}/>
                         </a>
                     </div>
                     <div className="videoInfo">
-                        <a href="/video/Q5l2ChAqRDg" className="title">Lorem Ipsum is simply dummy text of the printing and </a>
-                        <a className="channelName" href="/channel/Rabie Elkheir">Rabie Elkheir</a>
-                        <span className="totalViews"><i className="fa fa-eye"/>2.8M views </span>
-                        <span className="date"><i className="fa fa-clock-o"/>5 months ago </span>
+                        <a href={"/video/" + this.props.url.split('watch?v=')[1]}
+                           className="title">{this.props.title} </a>
+                        <p className="description">{this.props.description}</p>
+                        <a className="channelName" href={"/channel/" + this.props.author}>{this.props.author}</a>
+                        <span className="totalViews"><i className="fa fa-eye"/>{this.props.nbViews} </span>
+                        <span className="date"><i className="fa fa-clock-o"/>{this.props.date} </span>
                     </div>
                 </div>
             </div>

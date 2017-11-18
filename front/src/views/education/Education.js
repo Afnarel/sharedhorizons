@@ -1,6 +1,7 @@
 import React from 'react';
 import className from 'classnames';
 import VideoThumbmail from '../../components/videothumbmail/VideoThumbmail';
+import Constants from '../../services/ConstantsService';
 import Scrollbar from 'react-custom-scrollbars';
 
 import './Education.scss';
@@ -76,9 +77,16 @@ class Education extends React.Component {
                     </div>
                     <div className="videos">
                         {
-                            Array.from(Array(15), (x, i) => i).map(i => {
+                            Constants.VIDEOS.education.map(video => {
                                 return (
-                                    <VideoThumbmail/>
+                                    <VideoThumbmail title={video.title}
+                                                    author={video.author}
+                                                    nbViews={video['nb_views']}
+                                                    category={video.category}
+                                                    thumbnail={video.thumbnail}
+                                                    url={video.url}
+                                                    length={video.length}
+                                                    date={video['published_date']}/>
                                 )
                             })
                         }
