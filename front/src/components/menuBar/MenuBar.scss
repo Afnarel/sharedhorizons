@@ -63,4 +63,13 @@
   .tab:nth-child(4) .icon {
     background-color: #444444;
   }
+
+  .vrButton {
+    cursor: pointer;
+    margin-right: 15px;
+    flex: 1 1;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
