@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +26,7 @@ SECRET_KEY = 'o#xys4_w6o=9x#j3$14to9a21er6t1s*hdebe34&=g6%jphh$n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [127.0.0.1]
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -37,6 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_swagger',
+    'sharedhorizons'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,9 +80,9 @@ WSGI_APPLICATION = 'sharedhorizons.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ig_coaching',
-        'USER': 'ignilife',
-        'PASSWORD': 'ignilife',
+        'NAME': 'sharedhorizons',
+        'USER': 'sharedhorizons',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -102,3 +106,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
