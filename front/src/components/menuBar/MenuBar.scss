@@ -70,7 +70,19 @@
     line-height: 35px;
   }
 
-  .vrButton {
+  .right {
+
+    .hello, .pieces{
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+
+      .amount{
+        margin-left: 10px;
+      }
+    }
+
+
     cursor: pointer;
     margin-right: 15px;
     flex: 1 1;

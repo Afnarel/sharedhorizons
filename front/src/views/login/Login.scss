@@ -1,0 +1,161 @@
+.login {
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100% !important;
+  z-index: 999;
+  width: 100%;
+  background-color: #237f81;
+
+  .logo {
+    text-align: center;
+    padding: 15px;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  &:after {
+    content: " ";
+    width: 100%;
+    background-color: #f8f8f8;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    background-attachment: fixed;
+    background-image: url("../../images/login-background.jpeg");
+    opacity: 0.2;
+  }
+
+  .box {
+    font-family: 'Roboto', sans-serif;
+    max-width: 470px;
+    background-color: #FFF;
+    margin: 100px auto;
+    font-size: 13px;
+    color: #888da8;
+    font-weight: 300;
+  }
+
+  .form-output {
+    padding: 30px;
+
+    label {
+      font-size: 14px;
+      text-transform: capitalize;
+      color: #686868;
+      max-width: 100%;
+      font-weight: 700;
+    }
+
+    input[type="email"], input[type="password"] {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .remember {
+      .checkbox {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 13px;
+
+        label {
+          font-family: 'Roboto', sans-serif;
+          font-size: 14px;
+          text-transform: capitalize;
+          color: #686868;
+          font-weight: 400;
+        }
+
+        span {
+          display: inline-block;
+          margin-top: -3px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .forgot {
+      float: right;
+      font-size: 13px;
+      color: #888da8;
+      font-weight: 300;
+    }
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      margin: 10px 0;
+    }
+
+    .separator {
+      width: 100%;
+      background-color: #cdcdcd;
+      height: 1px;
+    }
+
+    .button {
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 18px;
+      line-height: 1.3333333;
+      background-color: #2f5b9d;
+      color: #FFF;
+      text-decoration: none;
+      border-radius: 0;
+      width: 100%;
+      font-weight: 400;
+
+      .fa {
+        margin: 3px 10px 0 0;
+      }
+    }
+
+    .connection {
+      background-color: #575757;
+    }
+
+    .twitter {
+      margin-top: 0;
+      background-color: #38bff1;
+      margin-bottom: 20px;
+    }
+  }
+
+  .noAccount {
+    transition: all 0.25s ease-in-out;
+
+    a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+
+}

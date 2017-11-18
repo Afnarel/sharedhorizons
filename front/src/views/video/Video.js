@@ -23,8 +23,8 @@ class Video extends React.Component {
                             }}
                         />
 
-
                         <div className="commentaries">
+                            <div className="tips">Donner des tips</div>
                             <h1>Commentaires</h1>
                             {
                                 Array.from(Array(3), (x, i) => i).map((i) => {

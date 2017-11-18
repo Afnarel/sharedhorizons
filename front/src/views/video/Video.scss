@@ -1,4 +1,5 @@
 .view.video {
+
   .toto {
     margin-right: 25px;
   }
@@ -7,6 +8,18 @@
     background-color: #fff;
     margin-top: 25px;
     padding: 25px;
+    position: relative;
+
+    .tips {
+      cursor: pointer;
+      top: 15px;
+      right: 15px;
+      background-color: #ff5e3a;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      position: absolute;
+    }
 
     h1 {
       padding: 0 0 20px;
