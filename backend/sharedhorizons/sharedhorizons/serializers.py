@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.humanize.templatetags.humanize import naturaltime
+from random import randint
 from .models import Video
 
 
@@ -35,7 +36,8 @@ class VideoSerializer(serializers.ModelSerializer):
         return video.url
 
     def get_length(self, video):
-        return "10:53"
+        return "{}:{}".format(
+            str(randint(0, 59)).zfill(2), str(randint(0, 59)).zfill(2))
 
     class Meta:
         model = Video
