@@ -29,7 +29,7 @@ class VideoSerializer(serializers.ModelSerializer):
         return video.channel.category.name
 
     def get_thumbnail(self, video):
-        return video.thumbnails.get(label="high").url
+        return video.thumbnails.get(label="medium").url
 
     def get_url(self, video):
         return video.url
