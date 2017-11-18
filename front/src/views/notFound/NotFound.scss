@@ -1,0 +1,49 @@
+@import '../../constants';
+
+.notFoundView {
+  margin: 0 !important;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  .errorContainer {
+    width: 100%;
+    text-align: center;
+    margin: 5% auto;
+
+    .errorCode {
+      font-size: 160px;
+    }
+
+    .errorMessage {
+      font-size: 26px;
+      color: #333;
+      font-weight: bold;
+      margin-top: -90px;
+    }
+
+    .button {
+      text-align: center;
+
+      .backButton {
+        display: inline-block;
+        margin-top: 32px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: black;
+        background-color: white;
+        border: solid lightgrey 1px;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
+  }
+}

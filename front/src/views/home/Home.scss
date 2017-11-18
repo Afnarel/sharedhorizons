@@ -1,0 +1,17 @@
+.home {
+
+  .scrollbar {
+    > div:first-child {
+      padding-right: 15px;
+    }
+  }
+
+  .videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+}
