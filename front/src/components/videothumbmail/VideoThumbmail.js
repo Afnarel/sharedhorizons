@@ -21,7 +21,7 @@ class VideoThumbmail extends React.Component {
                         <a href={"/video/" + this.props.url.split('watch?v=')[1]}
                            className="title">{this.props.title}</a>
                         <a className="channelName" href={"/channel/" + this.props.author}>{this.props.author}</a>
-                        <span className="totalViews"><i className="fa fa-eye"/>{this.props.nbViews} </span>
+                        <span className="totalViews"><i className="fa fa-eye"/>{getRandomInt(10, 10000)} </span>
                         <span className="date"><i className="fa fa-clock-o"/>{this.props.date}</span>
                     </div>
                 </div>
