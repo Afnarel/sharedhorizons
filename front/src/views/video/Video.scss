@@ -1,0 +1,80 @@
+.view.video {
+  .toto {
+    margin-right: 25px;
+  }
+
+  .commentaries {
+    background-color: #fff;
+    margin-top: 25px;
+    padding: 25px;
+
+    h1 {
+      padding: 0 0 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .commentary {
+      margin-bottom: 15px;
+
+      .author {
+        display: flex;
+        font-size: 13px;
+        align-items: flex-end;
+        font-weight: 500;
+
+        .author-lorem {
+          display: inline-block;
+        }
+
+        .date {
+          font-size: 12px;
+          color: grey;
+          margin-left: 5px;
+          margin-bottom: 1px;
+        }
+      }
+
+      .text {
+        font-size: 12px;
+      }
+    }
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .addCommentary {
+      padding: 5px;
+      border: solid 1px lightgrey;
+      height: 100px;
+      width: 100%;
+    }
+
+    .yoloButton {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .validateButton {
+        cursor: pointer;
+        margin-top: 15px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #ff5e3a;
+        color: #FFF;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        padding: 3px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

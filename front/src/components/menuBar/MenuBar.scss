@@ -1,0 +1,66 @@
+@import '../../constants';
+
+.menuBar {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  height: 75px;
+  padding: 10px 15px;
+  background-color: #FFF;
+  box-shadow: -1px 2px 26px -6px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
+
+  .logo img {
+    height: 80%;
+  }
+
+  .tabs {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+
+    .tab {
+      cursor: pointer;
+      display: flex;
+      font-family: 'Roboto', sans-serif;
+      color: #444444;
+      font-weight: 700;
+      font-size: 12px;
+      margin-right: 30px;
+      align-items: center;
+      text-transform: uppercase;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .icon {
+        color: #ffffff;
+        height: 35px;
+        width: 35px;
+        margin-right: 20px;
+        text-align: center;
+        padding-top: 8px;
+        font-size: 16px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .tab:nth-child(1) .icon {
+    background-color: #ff5e3a;
+  }
+
+  .tab:nth-child(2) .icon {
+    background-color: #66c0c2;
+  }
+
+  .tab:nth-child(3) .icon {
+    background-color: #fab318;
+  }
+
+  .tab:nth-child(4) .icon {
+    background-color: #444444;
+  }
+}

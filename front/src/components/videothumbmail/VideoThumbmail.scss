@@ -1,0 +1,86 @@
+.videoThumbmail {
+  margin: 15px;
+  flex: 1 1;
+  min-width: 220px;
+  max-width: 350px;
+  flex-basis: 250px;
+
+  .thumb {
+    position: relative;
+
+    .time {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      color: #ffffff;
+      background-color: #76c1c7;
+      display: block;
+      padding: 5px;
+      width: 60px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      text-align: center;
+      line-height: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .videoInfo {
+    position: relative;
+    height: 120px;
+    background-color: #FFF;
+    padding: 15px;
+
+    .title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #333333;
+      line-height: 19px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .channelName {
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #a7a7a7;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      line-height: 19px;
+      text-decoration: none;
+    }
+
+    .totalViews {
+      position: absolute;
+      color: #a7a7a7;
+      font-size: 10px;
+      font-weight: 500;
+      left: 15px;
+      bottom: 15px;
+    }
+
+    .date {
+      position: absolute;
+      color: #a7a7a7;
+      font-size: 10px;
+      font-weight: 500;
+      right: 15px;
+      bottom: 15px;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}

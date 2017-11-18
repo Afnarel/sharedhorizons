@@ -1,0 +1,48 @@
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+@import "./constants.scss";
+@import "./animations.scss";
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.sidenav {
+  display: inline-block;
+  width: 220px;
+  background-color: #f8f8f8;
+  height: calc(100% - 75px);
+}
+
+.views {
+  background-color: #E5E5E5;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - 75px);
+  width: calc(100% - 220px);
+
+  > div {
+    margin: 25px 5px 0 25px;
+    height: calc(100% - 50px);
+  }
+}
+
+.categoryHeader {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 0 5px 0;
+  font-weight: 700;
+  color: #444444;
+  font-size: 14px;
+
+  .fa {
+    font-size: 18px;
+    color: #ff5e3a;
+    margin-right: 10px;
+  }
+}
