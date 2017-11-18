@@ -8,7 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ChannelAdmin(admin.ModelAdmin):
-    list_display = ('channel_id', 'name', 'category_name', 'img')
+    list_display = ('channel_id', 'name', 'category_name', 'gender', 'img')
     list_filter = ('category',)
     search_fields = ('channel_id', 'name',)
 
