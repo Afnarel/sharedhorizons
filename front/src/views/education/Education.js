@@ -12,6 +12,10 @@ class Education extends React.Component {
         this.state = {
             tags: ['histoire', 'geographie', 'langues', 'mathematiques', 'sciences', 'philosophie', 'psychologie'],
             selectedTags: ['histoire', 'geographie', 'langues', 'mathematiques', 'sciences', 'philosophie', 'psychologie'],
+            videos: Constants.VIDEOS.education.map(video => {
+                video.tag = randomTag();
+                return video;
+            }),
             ctrlKey: false
         }
     }
@@ -45,7 +49,7 @@ class Education extends React.Component {
     _updateTagsFilter(tag) {
         let currentTags = this.state.selectedTags;
 
-        const index = currentTags.findIndex( t => t === tag);
+        const index = currentTags.findIndex(t => t === tag);
 
         if (this.state.ctrlKey) {
             ~index ? currentTags.splice(index, 1) : currentTags.push(tag);
@@ -77,7 +81,7 @@ class Education extends React.Component {
                     </div>
                     <div className="videos">
                         {
-                            Constants.VIDEOS.education.map(video => {
+                            this.state.videos.filter(v => this.state.selectedTags.indexOf(v.tag) >= 0).map(video => {
                                 return (
                                     <VideoThumbmail title={video.title}
                                                     author={video.author}
@@ -95,6 +99,15 @@ class Education extends React.Component {
             </div>
         );
     }
+}
+
+function randomTag() {
+    const tags = ['histoire', 'geographie', 'langues', 'mathematiques', 'sciences', 'philosophie', 'psychologie'];
+    return tags[getRandomInt(0, tags.length - 1)];
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 export default Education;

@@ -34,7 +34,7 @@
   .videos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     user-select: none;
   }
 }
