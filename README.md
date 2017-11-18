@@ -8,7 +8,7 @@ WHAT06 Hackathon project
  ``` bash
     $ cd front
     $ npm install
-    $ npm stat
+    $ npm start
  ```
  
  Should work
