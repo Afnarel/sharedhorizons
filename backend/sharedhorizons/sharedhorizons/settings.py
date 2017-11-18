@@ -52,6 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'sharedhorizons.crossdomainxhr.XsSharing',
 )
 
 ROOT_URLCONF = 'sharedhorizons.urls'
