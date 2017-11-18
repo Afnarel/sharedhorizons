@@ -9,12 +9,21 @@ class Category(models.Model):
 
 
 class Channel(models.Model):
+    FEMALE = "female"
+    MALE = "male"
+
+    GENDERS = (
+        (FEMALE, "Female"),
+        (MALE, "Male")
+    )
+
     channel_id = models.CharField(max_length=255)
     category = models.ForeignKey(Category, related_name='channels')
     name = models.CharField(max_length=255)
     description = models.TextField()
     media = models.CharField(max_length=255)
     link = models.CharField(max_length=255)
+    gender = models.CharField(max_length=10, choices=GENDERS)
 
     def __str__(self):
         return self.name

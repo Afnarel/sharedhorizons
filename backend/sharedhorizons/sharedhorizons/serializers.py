@@ -13,9 +13,13 @@ class VideoSerializer(serializers.ModelSerializer):
     thumbnail = serializers.SerializerMethodField()
     url = serializers.SerializerMethodField()
     length = serializers.SerializerMethodField()
+    gender = serializers.SerializerMethodField()
 
     def get_author(self, video):
         return video.channel.name
+
+    def get_gender(self, video):
+        return video.channel.gender
 
     def get_channel_id(self, video):
         return video.channel.channel_id
@@ -44,6 +48,7 @@ class VideoSerializer(serializers.ModelSerializer):
         fields = (
             'title',
             'author',
+            'gender',
             'channel_id',
             'nb_views',
             'published_date',
