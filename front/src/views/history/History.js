@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoThumbmailHorizontal from '../../components/videothumbmailhorizontal/VideoThumbmailHorizontal';
+import Constants from '../../services/ConstantsService';
 import Scrollbar from 'react-custom-scrollbars';
 
 import './History.scss';
@@ -10,11 +11,20 @@ class History extends React.Component {
             <div className="history">
                 <Scrollbar>
                     {
-                        Array.from(Array(19), (x, i) => i).map(() => {
+                        Constants.VIDEOS.trending.map(video => {
                             return (
-                                <VideoThumbmailHorizontal/>
+                                <VideoThumbmailHorizontal title={video.title}
+                                                          author={video.author}
+                                                          nbViews={video['nb_views']}
+                                                          category={video.category}
+                                                          thumbnail={video.thumbnail}
+                                                          description={video.description}
+                                                          url={video.url}
+                                                          length={video.length}
+                                                          date={video['published_date']}/>
                             )
                         })
+
                     }
                 </Scrollbar>
             </div>
