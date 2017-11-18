@@ -76,7 +76,7 @@ url:"http://www.youtube.com/watch?v=RyktNxVldmI"
         let position = circularPositionFromIndex(index, boxSize)
         
         return (
-            <Vid key={index} id={vid.id} name={vid.name} thumbnail={vid.thumbnail}
+            <Vid key={index} id={vid.id} name={vid.name} thumbnail={"http://sharedhorizons.api.vashnak.fr/api/image?url=" + vid.thumbnail}
                 type={vid.type}
                 width={boxSize} height={boxSize} depth={boxSize}
                 position={position}
